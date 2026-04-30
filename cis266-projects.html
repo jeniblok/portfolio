@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CIS266 Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Jennifer Kristine Woldt</h1>
+    <p>CIS Computer Programming Electronic Portfolio</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="docs/JenniferWoldtResume.pdf">Resume</a>
+    <a href="CIS_Syllabi.html">CIS Syllabi</a>
+    <a href="projects.html">Advanced Projects</a>
+    <a href="cis296-projects.html">CIS296 Projects</a>
+    <a href="cis241-projects.html">CIS241 Projects</a>
+    <a href="cis266-projects.html">CIS266 Projects</a>
+</nav>
+
+<main>
+    <section>
+        <h2>CIS266 Web Service Projects</h2>
+
+        <div class="card">
+            <h3>Dynamic Unit2_Ex3</h3>
+            <p>RESTful AJAX-JSON-PHP-MySQL DB Web Service documentation.</p>
+            <p><strong>Working Demo:</strong></p>
+<p>
+    <a href="http://localhost/CIS266/Students/WolJ_unit2_ex3/index.html" target="_blank">
+        View Unit 2 Exercise 3 Web Service Demo
+    </a>
+</p>
+        </div>
+
+        <div class="card">
+            <h3>Dynamic Scrum 3 Team Project</h3>
+            <p>Unique CRUD JSON-PHP-MySQL RESTful Web Service documentation.</p>
+            <p><strong>Working Demo:</strong></p>
+<p>
+    <a href="http://localhost/CIS266/Scrum3_Team_3/Client_3/index.html" target="_blank">
+        View Dynamic Scrum 3 Team Project Demo
+    </a>
+</p>
+        </div>
+
+        <div class="card">
+    <h3>Unit 3 - WCF Web Service Project</h3>
+
+    <p>
+        This project demonstrates the creation and deployment of a Windows Communication Foundation (WCF)
+        service using C#. The service exposes endpoints that can be consumed by client applications and
+        provides structured communication between systems.
+    </p>
+
+    <p><strong>Technologies Used:</strong></p>
+    <ul>
+        <li>C#</li>
+        <li>WCF (Windows Communication Foundation)</li>
+        <li>SOAP / XML</li>
+        <li>Service Contracts</li>
+    </ul>
+
+    <p><strong>Key Features:</strong></p>
+    <ul>
+        <li>Service endpoint configuration using .svc file</li>
+        <li>WSDL generation for client consumption</li>
+        <li>Structured service communication using SOAP</li>
+        <li>Client interaction through generated service proxy</li>
+    </ul>
+
+    <p><strong>Screen Capture:</strong></p>
+    <img src="images/wcf-service.png" class="project-image" alt="WCF Service Screenshot">
+
+    <p><strong>Sample Code:</strong></p>
+    <div class="code-box">
+[ServiceContract]
+public interface IService1
+{
+    [OperationContract]
+    string GetData(int value);
+}
+    </div>
+
+    <p>
+        This code defines a service contract used to expose operations that can be accessed by client
+        applications. The WCF framework generates the service description (WSDL) based on this contract.
+    </p>
+</div>
+        </div>
+
+        <div class="card">
+    <h3>Scrum 4 Team Project - Real-Time Voting Application</h3>
+
+    <p>
+        This project is a real-time voting application developed using Socket.IO
+        to demonstrate live communication between connected users. The application
+        allows multiple users to vote on a question and see results update instantly
+        without refreshing the page.
+    </p>
+
+    <p><strong>Technologies Used:</strong></p>
+    <ul>
+        <li>Node.js</li>
+        <li>Socket.IO</li>
+        <li>JavaScript</li>
+        <li>HTML / CSS</li>
+    </ul>
+
+    <p><strong>Key Features:</strong></p>
+    <ul>
+        <li>Real-time vote updates across multiple users</li>
+        <li>Live client-server communication using WebSockets</li>
+        <li>Dynamic UI updates without page refresh</li>
+        <li>Event-driven architecture using Socket.IO</li>
+    </ul>
+
+    <p><strong>Working Demo:</strong></p>
+    <p>
+        This application runs locally using Node.js. To test the application,
+        the server must be started and accessed through a browser at localhost.
+    </p>
+
+    <p><strong>Presentation & Demo:</strong></p>
+<p>
+    <a href="https://drive.google.com/drive/folders/1JqyojUxDKWvXZVxIzgxdAbT_vf1b3He0?usp=sharing" target="_blank" rel="noopener noreferrer">
+        View Scrum 4 Presentation Slides and Demo Video
+    </a>
+</p>
+
+    <p><strong>Sample Code:</strong></p>
+    <div class="code-box">
+const socket = io();
+
+document.querySelectorAll(".vote-btn").forEach(button => {
+    button.addEventListener("click", () => {
+        const vote = button.dataset.vote;
+        socket.emit("vote", vote);
+    });
+});
+
+socket.on("updateResults", data => {
+    document.getElementById("results").textContent = JSON.stringify(data);
+});
+    </div>
+
+    <p>
+        This code demonstrates client-side Socket.IO communication where user votes
+        are sent to the server and updated results are broadcast back to all connected clients
+        in real time.
+    </p>
+</div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Jennifer Kristine Woldt</p>
+</footer>
+
+</body>
+</html>

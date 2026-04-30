@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Jennifer Kristine Woldt</h1>
+    <p>CIS Computer Programming Electronic Portfolio</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="docs/JenniferWoldtResume.pdf">Resume</a>
+    <a href="CIS_Syllabi.html">CIS Syllabi</a>
+    <a href="projects.html">Advanced Projects</a>
+    <a href="cis296-projects.html">CIS296 Projects</a>
+    <a href="cis241-projects.html">CIS241 Projects</a>
+    <a href="cis266-projects.html">CIS266 Projects</a>
+</nav>
+
+<main>
+    <section>
+    <h2>Advanced Project Documentation</h2>
+
+    <div class="card">
+        <h3>Lavender Steel Forge Website</h3>
+
+        <p><strong>Project Description:</strong></p>
+        <p>
+            This project is a custom-built website developed for Lavender Steel Forge,
+            a blacksmithing business. The purpose of the site is to showcase products,
+            provide business information, and create a professional online presence
+            for potential customers.
+        </p>
+
+        <p><strong>Technologies Used:</strong></p>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Responsive Web Design</li>
+            <li>Media Integration (Images & Video)</li>
+        </ul>
+
+        <p><strong>Key Features:</strong></p>
+        <ul>
+            <li>Custom layout and navigation structure</li>
+            <li>Responsive design for mobile and desktop users</li>
+            <li>Image gallery showcasing products and craftsmanship</li>
+            <li>Video integration for visual engagement</li>
+            <li>Contact page for customer inquiries</li>
+        </ul>
+
+        <p><strong>Live Website:</strong></p>
+        <p>
+            <a href="file:///C:/Users/black/Desktop/STC%20Classes%20Spring%20Semester/Advanced%20Technologies/lavender_steel_forge_site/index.html" target="_blank">
+                View Lavender Steel Forge Website
+            </a>
+        </p>
+
+        <p><strong>Screen Captures:</strong></p>
+
+            <img src="images/homepage.png" class="project-image">
+            <img src="images/productspage.png" class="project-image">
+            <img src="images/contactpage.png" class="project-image">
+
+        <p><strong>Sample Code:</strong></p>
+        <div class="code-box">
+            <div class="code-box">
+            document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contactForm");
+            const formMessage = document.getElementById("formMessage");
+
+    if (form) {
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const project = document.getElementById("project").value.trim();
+
+            if (!name || !email || !project) {
+                if (formMessage) {
+                    formMessage.textContent = "Please complete the required fields before submitting.";
+                }
+                return;
+            }
+
+            const formData = {
+                name,
+                email,
+                phone,
+                project,
+                date: new Date().toLocaleString()
+            };
+
+            const submissions = JSON.parse(localStorage.getItem("forgeRequests")) || [];
+            submissions.push(formData);
+            localStorage.setItem("forgeRequests", JSON.stringify(submissions));
+
+            if (formMessage) {
+                formMessage.textContent = "Thanks! Your request has been saved on this browser.";
+            }
+
+            form.reset();
+        });
+    }
+
+    const faqButtons = document.querySelectorAll(".faq-question");
+
+    faqButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+            const item = button.closest(".faq-item");
+            const isOpen = item.classList.contains("open");
+
+            item.classList.toggle("open");
+            button.setAttribute("aria-expanded", String(!isOpen));
+        });
+    });
+});
+
+</div>
+<p>
+    This JavaScript code handles form validation, user input processing, and interactive UI behavior
+    for the Lavender Steel Forge website. It prevents form submission when required fields are missing,
+    stores submitted data in the browser using localStorage, and provides user feedback. Additionally,
+    it controls the FAQ section by toggling visibility when questions are clicked, improving user experience.
+</p>
+&lt;header&gt;
+    &lt;h1&gt;Lavender Steel Forge&lt;/h1&gt;
+&lt;/header&gt;
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Jennifer Kristine Woldt</p>
+</footer>
+
+</body>
+</html>

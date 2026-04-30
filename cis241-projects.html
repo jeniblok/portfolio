@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CIS241 Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Jennifer Kristine Woldt</h1>
+    <p>CIS Computer Programming Electronic Portfolio</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="docs/JenniferWoldtResume.pdf">Resume</a>
+    <a href="CIS_Syllabi.html">CIS Syllabi</a>
+    <a href="projects.html">Advanced Projects</a>
+    <a href="cis296-projects.html">CIS296 Projects</a>
+    <a href="cis241-projects.html">CIS241 Projects</a>
+    <a href="cis266-projects.html">CIS266 Projects</a>
+</nav>
+
+<main>
+    <section>
+        <h2>CIS241 Dynamic Web Project</h2>
+
+        <div class="card">
+            <h3>Task Manager Web Application</h3>
+
+            <p><strong>Project Description:</strong></p>
+            <p>
+                This project is a dynamic web application developed using PHP and MySQL.
+                The Task Manager allows users to create, view, and manage tasks through
+                a web-based interface, demonstrating database-driven web development.
+            </p>
+
+            <p><strong>Technologies Used:</strong></p>
+            <ul>
+                <li>PHP</li>
+                <li>MySQL</li>
+                <li>HTML / CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Task creation and management</li>
+                <li>Dynamic data retrieval from a MySQL database</li>
+                <li>Form handling using PHP</li>
+                <li>Database interaction using SQL queries</li>
+                <li>User authentication with login and registration</li>
+            </ul>
+
+            <p><strong>Working Demo:</strong></p>
+            <a href="http://localhost/CIS241/taskmanager/index.php" target="_blank">
+                View Task Manager Application
+            </a>
+
+            <p><strong>Screen Capture:</strong></p>
+            <img src="images/taskmanager.png" class="project-image" alt="Task Manager Web Application Screenshot">
+
+            <p><strong>Sample Code:</strong></p>
+            <div class="code-box">
+&lt;?php
+$conn = new mysqli("localhost", "root", "", "taskmanager");
+
+if ($conn-&gt;connect_error) {
+    die("Connection failed: " . $conn-&gt;connect_error);
+}
+
+$sql = "SELECT * FROM tasks";
+$result = $conn-&gt;query($sql);
+?&gt;
+            </div>
+
+            <p>
+                This code demonstrates connecting to a MySQL database using PHP and retrieving
+                task data dynamically for display within the application.
+            </p>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Jennifer Kristine Woldt</p>
+</footer>
+
+</body>
+</html>

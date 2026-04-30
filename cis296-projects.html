@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CIS296 Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Jennifer Kristine Woldt</h1>
+    <p>CIS Computer Programming Electronic Portfolio</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="docs/JenniferWoldtResume.pdf">Resume</a>
+    <a href="CIS_Syllabi.html">CIS Syllabi</a>
+    <a href="projects.html">Advanced Projects</a>
+    <a href="cis296-projects.html">CIS296 Projects</a>
+    <a href="cis241-projects.html">CIS241 Projects</a>
+    <a href="cis266-projects.html">CIS266 Projects</a>
+</nav>
+
+<main>
+    <section>
+    <h2>CIS296 C# Project Documentation</h2>
+
+    <div class="card">
+        <h3>SportsPro Technical Support Application</h3>
+
+        <p><strong>Project Description:</strong></p>
+        <p>
+            This project is a full-stack ASP.NET Core MVC web application developed as part of a team project
+            in CIS296. The application is designed to manage technical support operations for a sports
+            management system, allowing administrators and technicians to manage products, customers,
+            incidents, and registrations.
+        </p>
+
+        <p><strong>Technologies Used:</strong></p>
+        <ul>
+            <li>C#</li>
+            <li>ASP.NET Core MVC</li>
+            <li>Entity Framework Core</li>
+            <li>SQL Server</li>
+            <li>HTML, CSS, Bootstrap</li>
+        </ul>
+
+        <p><strong>Key Features:</strong></p>
+        <ul>
+            <li>Admin dashboard for managing products, technicians, customers, and incidents</li>
+            <li>CRUD operations (Create, Read, Update, Delete) for all major entities</li>
+            <li>Database integration using Entity Framework Core</li>
+            <li>Role-based functionality for administrators and technicians</li>
+            <li>Clean UI using Bootstrap styling</li>
+        </ul>
+
+        <p><strong>My Contribution:</strong></p>
+        <p>
+            As part of a team project, I contributed to building the user interface, implementing form handling,
+            and assisting with controller logic and database interactions. I also participated in testing,
+            debugging, and ensuring the application functioned correctly across different features.
+        </p>
+
+        <p><strong>Screen Capture:</strong></p>
+        <img src="images/sportspro.png" class="project-image" alt="SportsPro Application Screenshot">
+
+        <p><strong>Sample Code:</strong></p>
+        <div class="code-box">
+public class ProductController : Controller
+{
+    private readonly AppDbContext _context;
+
+    public ProductController(AppDbContext context)
+    {
+        _context = context;
+    }
+
+    public IActionResult Index()
+    {
+        var products = _context.Products.ToList();
+        return View(products);
+    }
+}
+        </div>
+
+        <p>
+            This sample code demonstrates a controller used in the MVC pattern to retrieve data
+            from the database and pass it to a view for display.
+        </p>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Jennifer Kristine Woldt</p>
+</footer>
+
+</body>
+</html>
